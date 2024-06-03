@@ -1,0 +1,38 @@
+
+@use '../utils/variables' as variable;
+
+@mixin flexbox($display: flex, $direction: null, $justify: null, $align: null,$gap:null) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    
+  }
+
+
+  @mixin gradientBtn(){
+    border: transparent;
+    padding: 10px 32px;
+    font-size: 16px;
+    background: variable.$gradient-bg-color;
+    height: 48px;
+    border-radius: 99px;
+    color: white;
+    font-weight: 700;
+
+  }
+
+  @mixin container {
+    max-width: 1392px;
+    width: 100%;
+    padding: 0px 16px;
+    margin: 0 auto;
+  }
+
+  @mixin colorfulSmallBtn {
+        padding: 5px 16px;
+        background-color: #FCE6F3;
+        border-radius: 20px;
+        border: 1px solid #E31891;
+
+  }

@@ -1,0 +1,157 @@
+@use '../utils/mixins' as mixin;
+@use '../utils/variables' as variable;
+
+
+
+.envato{
+    background-color: #262626;
+    @include mixin.flexbox($justify:space-between, $gap: 20px,$align:center);
+    height: 54px;
+    
+
+    img {
+        width: 152px;
+        height: 18px;
+        margin: 0px 20px;
+    }
+
+    > div {
+        padding: 0px 20px;
+        
+
+    }
+    button {
+        border: none;
+        background-color: #7AA93C;
+        color: white;
+        font-size: 14px;
+        padding: 8px 20px;
+        border-radius: 4px;
+        
+
+    }
+}
+
+
+header {
+    margin: 16px 0px 64px;
+
+    .siteHeader {
+        @include mixin.container();
+
+        .container{
+            @include mixin.flexbox($align:center, );
+            padding: 8px 0px;
+        
+            
+        
+            img{
+                max-width: 100%;
+                width: 81px;
+                height: 32px;
+            }
+        
+            >nav {
+                display: flex;
+                flex: 1;
+        
+                ul {
+                    @include mixin.flexbox($align:center);
+                    list-style: none;
+                    margin-left: 40px;
+                    flex: 1;
+
+
+                    >li:first-child {
+                        padding: 8px 0px;
+                        margin-right: 12px;
+                        font-size: 16px;
+                    }
+
+                    > li {
+                        margin: 0px 12px;
+                        padding: 8px 0px;
+                        font-size: 16px;
+
+                    }
+                    >li:last-child {
+                        padding: 8px 0px;
+                        margin-left: 12px;
+                        font-size: 16px;
+                    }
+                    
+
+                    .underline {
+                        cursor: pointer;
+                        position: relative;
+                    }
+
+                    .underline::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        height: 1px; 
+                        background: linear-gradient(30deg, #215DEE, #B61CFF); 
+                        transition: width 0.3s ease;
+                      }
+        
+                      .underline:hover::after {
+                        width: 100%;
+                      }
+        
+                }
+        
+                .icons {
+                    @include mixin.flexbox($align:center);
+
+                    >div {
+                        @include mixin.flexbox($align:center);
+                        margin-right: 24px;
+
+                        >i {
+                            font-size: 20px;
+                            color: rgb(56, 55, 55);
+                        }
+
+                    }
+                }
+
+
+                .signindiv{
+                    @include mixin.flexbox($align:center, );
+
+                    display: flex;
+                    #signin{
+                        padding: 8px 0px;
+                        margin-right: 12px;
+                        font-size: 16px;
+                        
+                    }
+                    #memberButton{
+                        padding: 8px 0px;
+                        margin: 0px 12px;
+                        
+                        
+
+                        button{
+                            @include mixin.gradientBtn();
+
+                        }
+
+                    }
+
+                }
+                   
+                
+            }
+        }
+    }
+
+
+
+    
+   
+
+}
